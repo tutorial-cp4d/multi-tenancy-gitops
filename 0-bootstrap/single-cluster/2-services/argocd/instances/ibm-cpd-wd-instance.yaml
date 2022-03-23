@@ -28,8 +28,8 @@ spec:
       - name: spec.license.accept
         value: "true"
       - name: spec.license.license
-        value: Enterprise
+        value: Standard
       - name: spec.version
         value: 4.0.6
       - name: spec.storageClass
-        value: portworx-db-gp2-sc
+        value: managed-nfs-storage
