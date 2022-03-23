@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-cpd-wd-operator
+  name: ibm-cpd-wml-operator
   annotations:
     argocd.argoproj.io/sync-wave: "230"
   labels:
@@ -26,13 +26,13 @@ spec:
     helm:
       parameters:
       - name: metadata.name
-        value: ibm-cpd-wd-operator-catalog-subscription
+        value: ibm-cpd-wm-operator-catalog-subscription
       - name: spec.channel
         value: v4.0
       - name: spec.installPlanApproval
         value: Automatic
       - name: spec.name
-        value: ibm-cpd-wd
+        value: ibm-cpd-wml
       - name: spec.source
         value: ibm-operator-catalog
       - name: spec.sourceNamespace

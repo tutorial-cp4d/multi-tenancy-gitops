@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-cpd-wd-instance
+  name: ibm-cpd-wml-instance
   annotations:
     argocd.argoproj.io/sync-wave: "270"
   labels:
@@ -18,13 +18,13 @@ spec:
     server: https://kubernetes.default.svc
   project: services
   source:
-    chart: ibm-cp4d-watson-discovery-catalog-instance
+    chart: ibm-cp4d-watson-ml-catalog-instance
     repoURL: "" # Populated by kustomize patches in 2-services/kustomization.yaml
     targetRevision: 0.1.0
     helm:
       parameters:
       - name: metadata.name
-        value: wd
+        value: wml-cr
       - name: spec.license.accept
         value: "true"
       - name: spec.license.license
